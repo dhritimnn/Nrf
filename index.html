@@ -32,7 +32,9 @@
       </button>
     </div>
     
-    <ul id="dropdown" class="dropdown fixed w-full top-20 text-base bg-brand-600 text-white shadow-xl z-40" style="display:none; opacity:0;">
+    <div class="fixed w-full top-20 z-40 overflow-hidden">
+     <ul id="dropdown" class="dropdown text-base bg-brand-600 text-white shadow-xl" style="display:none;">
+
       <li class="border-b border-brand-700/50 pt-7">
         <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-house-door"></i> Home</a>
       </li>
@@ -45,10 +47,10 @@
       <li class="border-b border-brand-700/50 pb-7">
         <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-envelope"></i> Contact Us</a>
       </li>
-    </ul>
+    </ul></div>
   </nav>
   
-  <div id="blurpad" class="fixed inset-0 backdrop-blur-md bg-black/20 opacity-0 pointer-events-none transition-opacity duration-[2000ms] z-40"></div>
+  <div id="blurpad" class="fixed inset-0 backdrop-blur-md bg-black/20 opacity-0 pointer-events-none transition-opacity duration-[400ms] z-40"></div>
   
   <!-- HEADER -->
   <header class="relative flex justify-center items-center h-[70vh] w-full flex-col gap-8 text-center overflow-hidden bg-gradient-to-br from-brand-600 via-brand-500 to-brand-900">
