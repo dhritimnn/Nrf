@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>About – BNRF</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="stylesheets/root.css">
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand-900: #04262F;
+      --color-brand-800: #13314E;
+      --color-brand-700: #0F5A76;
+      --color-brand-600: #11475E;
+      --color-brand-400: #2DA5D4;
+      --color-brand-300: #99CFF6;
+      --color-accent:    #B474FF;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- NAV -->
+  <nav class="flex flex-col sticky top-0 z-50">
+    <div class="flex justify-between items-center h-20 bg-brand-700 text-white text-2xl px-7 w-full shadow-lg">
+      <span class="font-bold tracking-widest text-xl text-white/90 uppercase pl-4">BNRF</span>
+      <button id="menu-toggle" class="focus:outline-none">
+        <i id="menu-icon" class="bi bi-list text-4xl hover:text-brand-300 transition-colors"></i>
+      </button>
+    </div>
+    <div class="fixed w-full top-20 z-40 overflow-hidden">
+      <ul id="dropdown" class="dropdown text-base bg-brand-600 text-white shadow-xl" style="display:none;">
+        <li class="border-b border-brand-700/50 pt-7">
+          <a href="index.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-house-door"></i> Home</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="about.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-info-circle"></i> About</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-briefcase"></i> Our Work</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="certification.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-check2-square"></i> Certification</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="gallery.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-image"></i> Image Gallery</a>
+        </li>
+        <li class="border-b border-brand-700/50 pb-7">
+          <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-envelope"></i> Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="blurpad" class="fixed inset-0 backdrop-blur-md bg-black/20 opacity-0 pointer-events-none transition-opacity duration-[400ms] z-40"></div>
+  
+  <!-- PAGE HEADER -->
+  <section class="w-full bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900 py-14 flex flex-col items-center gap-2">
+    <h1 class="text-white text-4xl font-extrabold tracking-tight">About Us</h1>
+    <div class="h-1 w-20 bg-accent mt-2"></div>
+  </section>
+  
+  <!-- WHO WE ARE -->
+  <section class="w-full bg-blue-50 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-3">
+      <h2 class="text-2xl font-bold text-brand-700">Who We Are</h2>
+      <div class="h-1 w-12 bg-accent mb-2"></div>
+      <p class="text-brand-700/80 leading-relaxed">
+        The Bajali New Rays Foundation (BNRF) is a non-profit social welfare organization rooted in the Bajali district of Assam, India. Established in 2020, the foundation was born out of a shared belief that every individual deserves access to basic health, education, and social support — regardless of their background or circumstances.
+      </p>
+      <p class="text-brand-700/80 leading-relaxed">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vehicula ligula vel eros tincidunt, et dignissim nunc fermentum. Sed vel turpis ac sapien facilisis tristique id sit amet nisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.
+      </p>
+    </div>
+  </section>
+  
+  <hr class="border-blue-200">
+  
+  <!-- MISSION & VISION -->
+  <section class="w-full bg-blue-100 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-10">
+      
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white text-lg shrink-0">
+            <i class="bi bi-bullseye"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-brand-700">Our Mission</h2>
+        </div>
+        <p class="text-brand-700/80 leading-relaxed">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent euismod, sapien vel volutpat tincidunt, purus nisl ultrices libero, at facilisis nunc purus in nunc. Fusce tincidunt justo vel nibh vestibulum, vel pharetra nisl vestibulum.
+        </p>
+      </div>
+      
+      <div class="flex flex-col gap-3">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-brand-700 flex items-center justify-center text-white text-lg shrink-0">
+            <i class="bi bi-eye"></i>
+          </div>
+          <h2 class="text-2xl font-bold text-brand-700">Our Vision</h2>
+        </div>
+        <p class="text-brand-700/80 leading-relaxed">
+          Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+        </p>
+      </div>
+      
+    </div>
+  </section>
+  
+  <hr class="border-blue-200">
+  
+  <!-- WHAT WE DO -->
+  <section class="w-full bg-blue-50 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-3">
+      <h2 class="text-2xl font-bold text-brand-700">What We Do</h2>
+      <div class="h-1 w-12 bg-accent mb-2"></div>
+      
+      <div class="flex flex-col gap-4 mt-2">
+        
+        <div class="flex gap-4 items-start bg-white rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-xl shrink-0">
+            <i class="bi bi-heart-pulse"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-brand-700">Health Initiatives</p>
+            <p class="text-brand-700/70 text-sm leading-relaxed mt-1">Organizing free medical camps, health awareness drives, and collaborating with healthcare providers to bring services to underserved communities.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 items-start bg-white rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-xl shrink-0">
+            <i class="bi bi-people"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-brand-700">Social Welfare</p>
+            <p class="text-brand-700/70 text-sm leading-relaxed mt-1">Running community support programs, relief distributions, and partnering with local bodies to improve the quality of life across the Bajali district.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 items-start bg-white rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-xl shrink-0">
+            <i class="bi bi-mortarboard"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-brand-700">Education & Awareness</p>
+            <p class="text-brand-700/70 text-sm leading-relaxed mt-1">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  
+  <hr class="border-blue-200">
+  
+  <!-- MEET THE TEAM CTA -->
+  <section class="w-full bg-blue-100 px-8 py-14 flex flex-col items-center gap-5">
+    <div class="max-w-2xl w-full flex flex-col items-center text-center gap-3">
+      <i class="bi bi-people-fill text-4xl text-brand-400"></i>
+      <h2 class="text-2xl font-bold text-brand-700">The People Behind BNRF</h2>
+      <p class="text-brand-700/70 leading-relaxed max-w-md">
+        Our foundation is driven by a dedicated group of individuals who volunteer their time, skills, and passion for the betterment of the community.
+      </p>
+      <a href="members.html" class="mt-2 inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-600 text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shadow-md">
+        Meet Our Members <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="w-full bg-brand-900 text-white">
+    <div class="flex flex-col items-center gap-6 px-10 py-12">
+      <div class="flex flex-col items-center gap-1">
+        <span class="shimmer-text font-bold tracking-widest text-2xl uppercase">BNRF</span>
+        <span class="text-brand-300/50 text-xs tracking-[0.25em] uppercase">Bajali New Rays Foundation</span>
+      </div>
+      <div class="w-16 h-px bg-brand-400/30"></div>
+      <nav class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-brand-300/70">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="hover:text-white transition-colors">About</a>
+        <a href="" class="hover:text-white transition-colors">Our Work</a>
+        <a href="" class="hover:text-white transition-colors">Contact Us</a>
+      </nav>
+      <div class="flex gap-5 text-brand-300/60 text-xl">
+        <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-facebook"></i></a>
+        <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-instagram"></i></a>
+        <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-twitter-x"></i></a>
+        <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+    <div class="border-t border-brand-800 py-4 text-center text-xs text-brand-300/30 tracking-wide">
+      © 2026, Bajali New Rays Foundation. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="js/loader.js"></script>
+  <script src="js/root.js"></script>
+  
+</body>
+
+</html>

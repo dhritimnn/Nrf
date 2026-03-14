@@ -17,7 +17,7 @@
       --color-brand-600: #11475E;
       --color-brand-400: #2DA5D4;
       --color-brand-300: #99CFF6;
-      --color-accent: #B474FF;
+      --color-accent:    #B474FF;
     }
   </style>
 </head>
@@ -27,20 +27,18 @@
   <!-- NAV -->
   <nav class="flex flex-col sticky top-0 z-50">
     <div class="flex justify-between items-center h-20 bg-brand-700 text-white text-2xl px-7 w-full shadow-lg">
-      <span class="font-bold tracking-widest tet-xl text-white/90 uppercase pl-4">BNRF</span>
+      <span class="font-bold tracking-widest text-xl text-white/90 uppercase pl-4">BNRF</span>
       <button id="menu-toggle" class="focus:outline-none">
         <i id="menu-icon" class="bi bi-list text-4xl hover:text-brand-300 transition-colors"></i>
       </button>
     </div>
-    
     <div class="fixed w-full top-20 z-40 overflow-hidden">
       <ul id="dropdown" class="dropdown text-base bg-brand-600 text-white shadow-xl" style="display:none;">
-        
         <li class="border-b border-brand-700/50 pt-7">
-          <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-house-door"></i> Home</a>
+          <a href="index.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-house-door"></i> Home</a>
         </li>
         <li class="border-b border-brand-700/50">
-          <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-info-circle"></i> About</a>
+          <a href="about.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-info-circle"></i> About</a>
         </li>
         <li class="border-b border-brand-700/50">
           <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-briefcase"></i> Our Work</a>
@@ -49,7 +47,7 @@
           <a href="certification.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-check2-square"></i> Certification</a>
         </li>
         <li class="border-b border-brand-700/50">
-          <a href="gallery.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-image"></i> Image Gallary</a>
+          <a href="gallery.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-image"></i> Image Gallery</a>
         </li>
         <li class="border-b border-brand-700/50 pb-7">
           <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-envelope"></i> Contact Us</a>
@@ -60,21 +58,20 @@
   
   <div id="blurpad" class="fixed inset-0 backdrop-blur-md bg-black/20 opacity-0 pointer-events-none transition-opacity duration-[400ms] z-40"></div>
   
-  <!-- HEADER -->
-  <header class="relative flex justify-center items-center h-[70vh] w-full flex-col gap-8 text-center overflow-hidden bg-gradient-to-br from-brand-600 via-brand-500 to-brand-900">
-    
+  <!-- HERO -->
+  <header class="relative flex justify-center items-center h-[70vh] w-full flex-col gap-8 text-center overflow-hidden bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900">
     <div class="absolute w-72 h-72 bg-brand-400/20 rounded-full blur-3xl top-10 -left-16 pointer-events-none"></div>
     <div class="absolute w-56 h-56 bg-accent/10 rounded-full blur-3xl bottom-10 right-10 pointer-events-none"></div>
     
     <div class="relative">
       <div class="absolute inset-0 rounded-2xl bg-brand-400/30 blur-md scale-110"></div>
-      <img src="img/profile.webp" class="relative h-48 w-48 rounded-2xl object-cover ring-4 ring-white/20 shadow-2xl">
+      <img src="img/profile.webp" class="relative h-44 w-44 rounded-2xl object-cover ring-4 ring-white/20 shadow-2xl">
     </div>
     
     <div class="flex flex-col items-center gap-1">
       <div class="flex items-center gap-4 my-1">
         <div class="h-px w-16 bg-gradient-to-r from-transparent to-brand-400/60"></div>
-        <p class="shimmer-text text-2xl font-semibold tracking-widest uppercase">Bajali</p>
+        <p class="shimmer-text text-xl font-semibold tracking-widest uppercase">Bajali</p>
         <div class="h-px w-16 bg-gradient-to-l from-transparent to-brand-400/60"></div>
       </div>
       <p class="text-white text-5xl font-extrabold tracking-tight leading-tight">New Rays</p>
@@ -87,14 +84,40 @@
     </div>
   </header>
   
-  <!-- OUR WORK -->
-  <section class="w-full flex flex-col justify-center items-center bg-blue-100 pb-30">
-    <h2 class="text-3xl font-normal flex flex-col justify-center items-center px-10 pt-10">
-      <span>OUR WORK</span>
-      <div class="mt-2 h-1 w-20 bg-accent"></div>
-    </h2>
-    <br>
-    <div id="carousel-root" class="relative w-full max-w-2xl mx-auto select-none p-2">
+  <!-- STATS BAR -->
+  <div class="w-full bg-brand-800 text-white px-6 py-4 flex justify-center">
+    <div class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-xs tracking-widest uppercase text-brand-300/70">
+      <span class="flex items-center gap-2"><i class="bi bi-calendar3 text-brand-400"></i> Estd. 2020</span>
+      <span class="text-brand-400/30 hidden sm:inline">|</span>
+      <span class="flex items-center gap-2"><i class="bi bi-geo-alt text-brand-400"></i> Bajali, Assam</span>
+      <span class="text-brand-400/30 hidden sm:inline">|</span>
+      <span class="flex items-center gap-2"><i class="bi bi-heart-pulse text-brand-400"></i> Health &amp; Social Welfare</span>
+    </div>
+  </div>
+  
+  <!-- ABOUT SNIPPET -->
+  <section class="w-full bg-blue-50 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-3">
+      <h2 class="text-2xl font-bold text-brand-700">About Us</h2>
+      <div class="h-1 w-12 bg-accent mb-2"></div>
+      <p class="text-brand-700/80 leading-relaxed">
+        The Bajali New Rays Foundation is a non-profit social welfare organization rooted in the Bajali district of Assam, India. Founded in 2020, we work to bring accessible healthcare, community support, and social welfare programs to those who need it most.
+      </p>
+      <a href="about.html" class="mt-2 self-start inline-flex items-center gap-2 text-brand-400 hover:text-brand-700 font-semibold text-sm transition-colors">
+        Learn More <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </section>
+  
+  <hr class="border-blue-200">
+  
+  <!-- OUR WORK / CAROUSEL -->
+  <section class="w-full flex flex-col items-center bg-blue-100 px-8 py-14">
+    <div class="max-w-2xl w-full flex flex-col gap-3 mb-6">
+      <h2 class="text-2xl font-bold text-brand-700">Our Work</h2>
+      <div class="h-1 w-12 bg-accent"></div>
+    </div>
+    <div id="carousel-root" class="relative w-full max-w-2xl mx-auto select-none">
       <div class="overflow-hidden rounded-2xl shadow-xl">
         <div id="carousel-track" class="flex transition-transform duration-500 ease-in-out"></div>
       </div>
@@ -107,59 +130,90 @@
       <div id="carousel-dots" class="flex justify-center gap-2 mt-4"></div>
     </div>
   </section>
-  <hr class="text-blue-300">
   
+  <hr class="border-blue-200">
   
-  <!-- ABOUT -->
-  <section class="w-full p-10 flex flex-col justify-center items-center bg-blue-100">
-    <h2 class="text-3xl font-normal flex flex-col justify-center items-center">
-      <span>ABOUT US</span>
-      <div class="mt-2 h-1 w-20 bg-accent"></div>
-    </h2>
-    <br>
-    <div class="text-center text-brand-700">
-      The Bajali New Rays Foundation is a social welfare organization based in the Bajali district of Assam, India. The foundation is active in organizing community-driven initiatives focused on health and social welfare. <br><br>
-      <a class="text-blue-800" href="">Learn More...</a>
+  <!-- RECENT ACTIVITIES -->
+  <section class="w-full bg-blue-50 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-3">
+      <h2 class="text-2xl font-bold text-brand-700">Recent Activities</h2>
+      <div class="h-1 w-12 bg-accent mb-2"></div>
+      
+      <div class="flex flex-col gap-4 mt-2">
+        
+        <div class="flex gap-4 items-start bg-white rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-xl shrink-0">
+            <i class="bi bi-heart-pulse"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-brand-700">Health Initiatives</p>
+            <p class="text-brand-700/70 text-sm leading-relaxed mt-1">The foundation organized a free health check-up camp on December 7, 2025, in Bamakhata, Bajali — in collaboration with Medivision to provide accessible medical services to the local community.</p>
+          </div>
+        </div>
+        
+        <div class="flex gap-4 items-start bg-white rounded-2xl p-5 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-xl shrink-0">
+            <i class="bi bi-people"></i>
+          </div>
+          <div>
+            <p class="font-semibold text-brand-700">Social Welfare</p>
+            <p class="text-brand-700/70 text-sm leading-relaxed mt-1">The organization operates under the broader umbrella of social service in the region, often collaborating with local entities for public welfare programs.</p>
+          </div>
+        </div>
+        
+      </div>
     </div>
   </section>
   
-  <!-- Recent.... -->
-  <section class="w-full p-10 flex flex-col justify-center items-center bg-blue-200">
-    <h2 class="text-3xl font-normal flex flex-col justify-center items-center">
-      <span class="text-center">Recent Activities and Focus Areas</span>
-      <div class="mt-2 h-1 w-20 bg-accent"></div>
-    </h2>
-    <br>
-    <div class="text-center text-brand-700"><br>
-      <i class="text-brand-800">Health Initiatives:</i><br> The foundation recently organized a free health check-up camp on December 7, 2025, in Bamakhata, Bajali. This event was held in collaboration with Medivision to provide accessible medical services to the local community. <br><br><br>
-      <i class="text-brand-800">Social Welfare:</i><br> The organization operates under the broader umbrella of social service in the region, often collaborating with other local entities for public welfare programs.
+  <hr class="border-blue-200">
+  
+  <!-- GALLERY PREVIEW -->
+  <section class="w-full bg-blue-100 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-3 mb-6">
+      <h2 class="text-2xl font-bold text-brand-700">Gallery</h2>
+      <div class="h-1 w-12 bg-accent"></div>
     </div>
+    <div class="grid grid-cols-2 gap-3 w-full max-w-2xl">
+      <a href="gallery.html"><img src="workimgs/WA0009.jpg" class="rounded-2xl w-full h-40 object-cover shadow-md hover:scale-[1.02] hover:brightness-110 transition-all duration-300"></a>
+      <a href="gallery.html"><img src="workimgs/WA0008.jpg" class="rounded-2xl w-full h-40 object-cover shadow-md hover:scale-[1.02] hover:brightness-110 transition-all duration-300"></a>
+      <a href="gallery.html"><img src="workimgs/WA0007.jpg" class="rounded-2xl w-full h-40 object-cover shadow-md hover:scale-[1.02] hover:brightness-110 transition-all duration-300"></a>
+      <a href="gallery.html"><img src="workimgs/WA0006.jpg" class="rounded-2xl w-full h-40 object-cover shadow-md hover:scale-[1.02] hover:brightness-110 transition-all duration-300"></a>
+    </div>
+    <a href="gallery.html" class="mt-6 inline-flex items-center gap-2 text-brand-400 hover:text-brand-700 font-semibold text-sm transition-colors">
+      View Full Gallery <i class="bi bi-arrow-right"></i>
+    </a>
   </section>
   
+  <hr class="border-blue-200">
   
+  <!-- MEET THE MEMBERS CTA -->
+  <section class="w-full bg-blue-50 px-8 py-14 flex flex-col items-center gap-5">
+    <div class="max-w-2xl w-full flex flex-col items-center text-center gap-3">
+      <i class="bi bi-people-fill text-4xl text-brand-400"></i>
+      <h2 class="text-2xl font-bold text-brand-700">Meet Our Members</h2>
+      <p class="text-brand-700/70 leading-relaxed max-w-md text-sm">
+        BNRF is powered by a dedicated group of volunteers and community leaders working together for a better Bajali.
+      </p>
+      <a href="members.html" class="mt-2 inline-flex items-center gap-2 bg-brand-700 hover:bg-brand-600 text-white text-sm font-semibold px-6 py-3 rounded-full transition-colors shadow-md">
+        Meet the Team <i class="bi bi-arrow-right"></i>
+      </a>
+    </div>
+  </section>
   
   <!-- FOOTER -->
   <footer class="w-full bg-brand-900 text-white">
     <div class="flex flex-col items-center gap-6 px-10 py-12">
-      
-      <!-- Wordmark -->
       <div class="flex flex-col items-center gap-1">
         <span class="shimmer-text font-bold tracking-widest text-2xl uppercase">BNRF</span>
         <span class="text-brand-300/50 text-xs tracking-[0.25em] uppercase">Bajali New Rays Foundation</span>
       </div>
-      
-      <!-- Divider -->
       <div class="w-16 h-px bg-brand-400/30"></div>
-      
-      <!-- Nav links -->
       <nav class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-brand-300/70">
-        <a href="" class="hover:text-white transition-colors">Home</a>
-        <a href="" class="hover:text-white transition-colors">About</a>
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="hover:text-white transition-colors">About</a>
         <a href="" class="hover:text-white transition-colors">Our Work</a>
         <a href="" class="hover:text-white transition-colors">Contact Us</a>
       </nav>
-      
-      <!-- Social icons -->
       <div class="flex gap-5 text-brand-300/60 text-xl">
         <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-facebook"></i></a>
         <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-instagram"></i></a>
@@ -167,19 +221,14 @@
         <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-envelope"></i></a>
       </div>
     </div>
-    
-    <!-- Bottom bar -->
     <div class="border-t border-brand-800 py-4 text-center text-xs text-brand-300/30 tracking-wide">
       © 2026, Bajali New Rays Foundation. All rights reserved.
     </div>
   </footer>
   
-  
-  
-  
-  <script src='js/loader.js'></script>
-  <script src='js/root.js'></script>
-  <script src='js/index.js'></script>
+  <script src="js/loader.js"></script>
+  <script src="js/root.js"></script>
+  <script src="js/index.js"></script>
 </body>
 
 </html>
