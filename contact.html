@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <title>Contact – BNRF</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="stylesheets/root.css">
+  <style type="text/tailwindcss">
+    @theme {
+      --color-brand-900: #04262F;
+      --color-brand-800: #13314E;
+      --color-brand-700: #0F5A76;
+      --color-brand-600: #11475E;
+      --color-brand-400: #2DA5D4;
+      --color-brand-300: #99CFF6;
+      --color-accent:    #B474FF;
+    }
+  </style>
+</head>
+
+<body>
+  
+  <!-- NAV -->
+  <nav class="flex flex-col sticky top-0 z-50">
+    <div class="flex justify-between items-center h-20 bg-brand-700 text-white text-2xl px-7 w-full shadow-lg">
+      <span class="font-bold tracking-widest text-xl text-white/90 uppercase pl-4">BNRF</span>
+      <button id="menu-toggle" class="focus:outline-none">
+        <i id="menu-icon" class="bi bi-list text-4xl hover:text-brand-300 transition-colors"></i>
+      </button>
+    </div>
+    <div class="fixed w-full top-20 z-40 overflow-hidden">
+      <ul id="dropdown" class="dropdown text-base bg-brand-600 text-white shadow-xl" style="display:none;">
+        <li class="border-b border-brand-700/50 pt-7">
+          <a href="index.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-house-door"></i> Home</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="about.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-info-circle"></i> About</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-briefcase"></i> Our Work</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="certification.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-check2-square"></i> Certification</a>
+        </li>
+        <li class="border-b border-brand-700/50">
+          <a href="gallery.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-image"></i> Image Gallery</a>
+        </li>
+        <li class="border-b border-brand-700/50 pb-7">
+          <a href="contact.html" class="flex items-center gap-3 py-4 px-10 hover:bg-brand-700 transition-colors"><i class="bi bi-envelope"></i> Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  
+  <div id="blurpad" class="fixed inset-0 backdrop-blur-md bg-black/20 opacity-0 pointer-events-none transition-opacity duration-[400ms] z-40"></div>
+  
+  <!-- PAGE HEADER -->
+  <section class="w-full bg-gradient-to-br from-brand-600 via-brand-700 to-brand-900 py-14 flex flex-col items-center gap-2">
+    <h1 class="text-white text-4xl font-extrabold tracking-tight">Contact Us</h1>
+    <div class="h-1 w-20 bg-accent mt-2"></div>
+  </section>
+  
+  <!-- CONTACT CARDS -->
+  <main class="w-full bg-blue-50 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-4">
+      
+      <!-- Phone -->
+      <a href="+910000000000" class="flex gap-4 items-center bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-2xl shrink-0">
+          <i class="bi bi-telephone"></i>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-brand-400 font-semibold">Phone</p>
+          <p class="text-brand-700 font-semibold mt-0.5">+91 00000 00000</p>
+        </div>
+        <i class="bi bi-arrow-up-right text-brand-400/50 ml-auto text-xl"></i>
+      </a>
+      
+      <!-- Email -->
+      <a href="contact@bnrf.org" class="flex gap-4 items-center bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-2xl shrink-0">
+          <i class="bi bi-envelope"></i>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-brand-400 font-semibold">Email</p>
+          <p class="text-brand-700 font-semibold mt-0.5">contact@bnrf.org</p>
+        </div>
+        <i class="bi bi-arrow-up-right text-brand-400/50 ml-auto text-xl"></i>
+      </a>
+      
+      <!-- Address -->
+      <div class="flex gap-4 items-center bg-white rounded-2xl p-5 shadow-sm">
+        <div class="w-12 h-12 rounded-xl bg-brand-400/20 flex items-center justify-center text-brand-700 text-2xl shrink-0">
+          <i class="bi bi-geo-alt"></i>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-brand-400 font-semibold">Address</p>
+          <p class="text-brand-700 font-semibold mt-0.5">Bajali, Assam, India</p>
+          <p class="text-brand-700/50 text-sm">PIN – 781372</p>
+        </div>
+      </div>
+      
+    </div>
+  </main>
+  
+  <hr class="border-blue-200">
+  
+  <!-- SOCIAL -->
+  <section class="w-full bg-blue-100 px-8 py-14 flex flex-col items-center">
+    <div class="max-w-2xl w-full flex flex-col gap-3 mb-8">
+      <h2 class="text-2xl font-bold text-brand-700">Find Us On</h2>
+      <div class="h-1 w-12 bg-accent"></div>
+    </div>
+    <div class="max-w-2xl w-full flex flex-col gap-4">
+      
+      <a href="" class="flex gap-4 items-center bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-blue-100 flex items-center justify-center text-blue-600 text-2xl shrink-0">
+          <i class="bi bi-facebook"></i>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-brand-400 font-semibold">Facebook</p>
+          <p class="text-brand-700 font-semibold mt-0.5">Bajali New Rays Foundation</p>
+        </div>
+        <i class="bi bi-arrow-up-right text-brand-400/50 ml-auto text-xl"></i>
+      </a>
+      
+      <a href="" class="flex gap-4 items-center bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-pink-50 flex items-center justify-center text-pink-500 text-2xl shrink-0">
+          <i class="bi bi-instagram"></i>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-brand-400 font-semibold">Instagram</p>
+          <p class="text-brand-700 font-semibold mt-0.5">@bnrf_bajali</p>
+        </div>
+        <i class="bi bi-arrow-up-right text-brand-400/50 ml-auto text-xl"></i>
+      </a>
+      
+      <a href="" class="flex gap-4 items-center bg-white rounded-2xl p-5 shadow-sm hover:shadow-md transition-shadow">
+        <div class="w-12 h-12 rounded-xl bg-gray-100 flex items-center justify-center text-gray-700 text-2xl shrink-0">
+          <i class="bi bi-twitter-x"></i>
+        </div>
+        <div>
+          <p class="text-xs uppercase tracking-widest text-brand-400 font-semibold">X (Twitter)</p>
+          <p class="text-brand-700 font-semibold mt-0.5">@bnrf_bajali</p>
+        </div>
+        <i class="bi bi-arrow-up-right text-brand-400/50 ml-auto text-xl"></i>
+      </a>
+      
+    </div>
+  </section>
+  
+  <!-- FOOTER -->
+  <footer class="w-full bg-brand-900 text-white">
+    <div class="flex flex-col items-center gap-6 px-10 py-12">
+      <div class="flex flex-col items-center gap-1">
+        <span class="shimmer-text font-bold tracking-widest text-2xl uppercase">BNRF</span>
+        <span class="text-brand-300/50 text-xs tracking-[0.25em] uppercase">Bajali New Rays Foundation</span>
+      </div>
+      <div class="w-16 h-px bg-brand-400/30"></div>
+      <nav class="flex flex-wrap justify-center gap-x-8 gap-y-2 text-sm text-brand-300/70">
+        <a href="index.html" class="hover:text-white transition-colors">Home</a>
+        <a href="about.html" class="hover:text-white transition-colors">About</a>
+        <a href="" class="hover:text-white transition-colors">Our Work</a>
+        <a href="contact.html" class="hover:text-white transition-colors">Contact Us</a>
+      </nav>
+      <div class="flex gap-5 text-brand-300/60 text-xl">
+        <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/new_rays_foundation?igsh=MW4zazVod2NsdGhwOQ==" class="hover:text-brand-400 transition-colors"><i class="bi bi-instagram"></i></a>
+        <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-twitter-x"></i></a>
+        <a href="" class="hover:text-brand-400 transition-colors"><i class="bi bi-envelope"></i></a>
+      </div>
+    </div>
+    <div class="border-t border-brand-800 py-4 text-center text-xs text-brand-300/30 tracking-wide">
+      © 2026, Bajali New Rays Foundation. All rights reserved.
+    </div>
+  </footer>
+  
+  <script src="js/loader.js"></script>
+  <script src="js/root.js"></script>
+  
+</body>
+
+</html>
