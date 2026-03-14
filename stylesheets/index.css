@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.dropdown {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateY(-10px);
+}
+
+.dropdown.open {
+  opacity: 1 !important;
+  transform: translateY(0);
+  display: block !important;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  
+  100% {
+    background-position: 200% center;
+  }
+}
+
+/* shimmer uses CSS vars that Tailwind @theme exposes automatically */
+.shimmer-text {
+  background: linear-gradient(90deg,
+      var(--color-brand-400),
+      var(--color-brand-300),
+      #ffffff,
+      var(--color-brand-300),
+      var(--color-brand-400));
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
