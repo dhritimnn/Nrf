@@ -1,27 +1,22 @@
-
 /* ── CAROUSEL ── */
 const carouselCards = [
 {
-  img: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
-  title: "Summer Collection",
+  img: "workimgs/WA0006.jpg",
   description: "Explore our vibrant summer lineup featuring breathable fabrics and bold prints.",
   date: "June 1, 2025"
 },
 {
-  img: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
-  title: "Traditional Weaves",
+  img: "workimgs/WA0007.jpg",
   description: "Handcrafted traditional weaves celebrating Assamese textile craftsmanship.",
   date: "May 15, 2025"
 },
 {
-  img: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80",
-  title: "Festive Elegance",
+  img: "workimgs/WA0008.jpg",
   description: "Celebrate every festival in style with our curated ethnic ensembles.",
   date: "April 28, 2025"
 },
 {
-  img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80",
-  title: "New Arrivals",
+  img: "workimgs/WA0009.jpg",
   description: "Fresh silhouettes and contemporary designs have just landed.",
   date: "March 10, 2025"
 }];
@@ -33,7 +28,7 @@ const carouselCards = [
   const btnNext = document.getElementById('carousel-next');
   let current = 0,
     autoTimer;
-  const INTERVAL = 3500;
+  const INTERVAL = 8500;
   
   const accent = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim();
   
@@ -56,7 +51,7 @@ const carouselCards = [
     dot.style.borderRadius = '9999px';
     dot.style.transition = 'all 0.3s';
     dot.style.outline = 'none';
-    dot.style.backgroundColor = i === 0 ? accent : '#d1d5db';
+    dot.style.backgroundColor = i === 0 ? accent : '#90959E';
     dot.style.width = i === 0 ? '24px' : '10px';
     dot.addEventListener('click', () => goTo(i));
     dotsWrap.appendChild(dot);
@@ -66,7 +61,7 @@ const carouselCards = [
     current = (idx + carouselCards.length) % carouselCards.length;
     track.style.transform = `translateX(-${current * 100}%)`;
     dotsWrap.querySelectorAll('button').forEach((d, i) => {
-      d.style.backgroundColor = i === current ? accent : '#d1d5db';
+      d.style.backgroundColor = i === current ? accent : '#90959E';
       d.style.width = i === current ? '24px' : '10px';
     });
     resetAuto();
