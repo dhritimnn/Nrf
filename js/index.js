@@ -1,54 +1,42 @@
-/* ── DROPDOWN ── */
-const toggle = document.getElementById('menu-toggle');
-const dropdown = document.getElementById('dropdown');
-const menuIcon = document.getElementById('menu-icon');
-const blurpad = document.getElementById('blurpad');
-let open = false;
-
-toggle.addEventListener('click', () => {
-  open = !open;
-
-  if (open) {
-    dropdown.style.display = 'block';
-    requestAnimationFrame(() => dropdown.classList.add('open'));
-
-    blurpad.classList.remove('opacity-0', 'pointer-events-none');
-    blurpad.classList.add('opacity-100');
-
-    menuIcon.className = 'bi bi-x-lg text-3xl hover:text-brand-300 transition-colors pr-1';
-
-  } else {
-    dropdown.classList.remove('open');
-    dropdown.style.opacity = '0';
-
-    blurpad.classList.remove('opacity-100');
-    blurpad.classList.add('opacity-0', 'pointer-events-none'); // fix: restore pointer-events-none
-
-    menuIcon.className = 'bi bi-list text-4xl hover:text-brand-300 transition-colors';
-
-    setTimeout(() => { dropdown.style.display = 'none'; }, 250);
-  }
-});
-
 
 /* ── CAROUSEL ── */
 const carouselCards = [
-  { img: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80", title: "Summer Collection", description: "Explore our vibrant summer lineup featuring breathable fabrics and bold prints.", date: "June 1, 2025" },
-  { img: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80", title: "Traditional Weaves", description: "Handcrafted traditional weaves celebrating Assamese textile craftsmanship.", date: "May 15, 2025" },
-  { img: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80", title: "Festive Elegance", description: "Celebrate every festival in style with our curated ethnic ensembles.", date: "April 28, 2025" },
-  { img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80", title: "New Arrivals", description: "Fresh silhouettes and contemporary designs have just landed.", date: "March 10, 2025" }
-];
+{
+  img: "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80",
+  title: "Summer Collection",
+  description: "Explore our vibrant summer lineup featuring breathable fabrics and bold prints.",
+  date: "June 1, 2025"
+},
+{
+  img: "https://images.unsplash.com/photo-1469334031218-e382a71b716b?w=800&q=80",
+  title: "Traditional Weaves",
+  description: "Handcrafted traditional weaves celebrating Assamese textile craftsmanship.",
+  date: "May 15, 2025"
+},
+{
+  img: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?w=800&q=80",
+  title: "Festive Elegance",
+  description: "Celebrate every festival in style with our curated ethnic ensembles.",
+  date: "April 28, 2025"
+},
+{
+  img: "https://images.unsplash.com/photo-1558769132-cb1aea458c5e?w=800&q=80",
+  title: "New Arrivals",
+  description: "Fresh silhouettes and contemporary designs have just landed.",
+  date: "March 10, 2025"
+}];
 
-(function () {
+(function() {
   const track = document.getElementById('carousel-track');
   const dotsWrap = document.getElementById('carousel-dots');
   const btnPrev = document.getElementById('carousel-prev');
   const btnNext = document.getElementById('carousel-next');
-  let current = 0, autoTimer;
+  let current = 0,
+    autoTimer;
   const INTERVAL = 3500;
-
+  
   const accent = getComputedStyle(document.documentElement).getPropertyValue('--color-accent').trim();
-
+  
   carouselCards.forEach((c, i) => {
     const slide = document.createElement('div');
     slide.className = 'min-w-full';
@@ -62,7 +50,7 @@ const carouselCards = [
         </div>
       </div>`;
     track.appendChild(slide);
-
+    
     const dot = document.createElement('button');
     dot.style.height = '8px';
     dot.style.borderRadius = '9999px';
@@ -73,7 +61,7 @@ const carouselCards = [
     dot.addEventListener('click', () => goTo(i));
     dotsWrap.appendChild(dot);
   });
-
+  
   function goTo(idx) {
     current = (idx + carouselCards.length) % carouselCards.length;
     track.style.transform = `translateX(-${current * 100}%)`;
@@ -83,26 +71,27 @@ const carouselCards = [
     });
     resetAuto();
   }
-
+  
   function next() { goTo(current + 1); }
+  
   function prev() { goTo(current - 1); }
-
+  
   function resetAuto() {
     clearInterval(autoTimer);
     autoTimer = setInterval(next, INTERVAL);
   }
-
+  
   btnNext.addEventListener('click', next);
   btnPrev.addEventListener('click', prev);
   document.getElementById('carousel-root').addEventListener('mouseenter', () => clearInterval(autoTimer));
   document.getElementById('carousel-root').addEventListener('mouseleave', resetAuto);
-
+  
   let touchX = 0;
   track.addEventListener('touchstart', e => { touchX = e.touches[0].clientX; }, { passive: true });
   track.addEventListener('touchend', e => {
     const dx = e.changedTouches[0].clientX - touchX;
     if (Math.abs(dx) > 40) dx < 0 ? next() : prev();
   });
-
+  
   resetAuto();
 })();
