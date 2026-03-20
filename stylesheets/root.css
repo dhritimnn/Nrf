@@ -40,7 +40,7 @@
   animation: shimmer 4s linear infinite;
 }
 
-body div:not(#blurpad) {
+body *:not(#blurpad) {
   animation: reveal linear both;
   animation-timeline: view();
   animation-range: entry 0% entry 100%;
