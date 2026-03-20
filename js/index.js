@@ -2,23 +2,23 @@
 const carouselCards = [
 {
   img: "workimgs/WA0006.jpg",
-  description: "Explore our vibrant summer lineup featuring breathable fabrics and bold prints.",
-  date: "June 1, 2025"
+  description: "We provided the essential Clothing to the Patients.",
+  date: "June 4, 2025"
 },
 {
   img: "workimgs/WA0007.jpg",
-  description: "Handcrafted traditional weaves celebrating Assamese textile craftsmanship.",
-  date: "May 15, 2025"
+  description: "We distributed clothes among the villager.",
+  date: "Jan 14, 2025"
 },
 {
   img: "workimgs/WA0008.jpg",
-  description: "Celebrate every festival in style with our curated ethnic ensembles.",
-  date: "April 28, 2025"
+  description: "We held a Free Health Examine Camp.",
+  date: "Dec 7, 2025"
 },
 {
   img: "workimgs/WA0009.jpg",
-  description: "Fresh silhouettes and contemporary designs have just landed.",
-  date: "March 10, 2025"
+  description: "Our Work caught sight of Reporters",
+  date: "Dec 7, 2025"
 }];
 
 (function() {
