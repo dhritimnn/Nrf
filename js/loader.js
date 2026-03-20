@@ -107,7 +107,7 @@
   }
   
   const startTime = Date.now();
-  const MIN_DURATION = 3000;
+  const MIN_DURATION = 1500;
   
   function scheduleHide() {
     const elapsed = Date.now() - startTime;
