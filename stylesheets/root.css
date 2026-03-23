@@ -4,6 +4,9 @@
   font-family: "Lexend Deca", sans-serif;
 }
 
+body{
+  overflow: hidden;
+}
 .dropdown {
   transition: opacity 0.25s ease, transform 0.25s ease;
   transform: translateY(-40%); /* starts fully hidden above */
@@ -40,7 +43,7 @@
   animation: shimmer 4s linear infinite;
 }
 
-body *:not(#blurpad) {
+body *:not(#blurpad, footer, footer *) {
   animation: reveal linear both;
   animation-timeline: view();
   animation-range: entry 0% entry 100%;
@@ -49,10 +52,10 @@ body *:not(#blurpad) {
 @keyframes reveal {
   from {
     opacity: 0;
-    transform: translateY(60px);
+    transform: translateY(30px) translateX(-60px);
   }
   to {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(0) translateX(0);
   }
 }
